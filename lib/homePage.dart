@@ -12,6 +12,13 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+   const colorizeColors =[
+    Colors.pink,Colors.greenAccent,Colors.deepOrange,Colors.blue,Colors.red,
+   ];
+   const colorizeTextStyle = TextStyle(fontSize: 50,fontWeight: FontWeight.bold);
+
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Animated Text Kit'),
@@ -20,9 +27,9 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(child: Center(
         child: AnimatedTextKit(
           animatedTexts: [
-            WavyAnimatedText("MR Mostakim",textStyle: TextStyle(
-              fontSize: 20,color: Colors.pink
-            ),speed: Duration(milliseconds: 500),
+            ColorizeAnimatedText("MR Mostakim",textStyle: colorizeTextStyle,
+            colors:colorizeColors,
+            speed: Duration(milliseconds: 1000),
             //textAlign: TextAlign.end
             )
             
